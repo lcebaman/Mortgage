@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Property Move Calculator</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- React + ReactDOM (UMD builds) -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Babel for JSX/ES6 in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Supabase client (optional; only used if configured) -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  </head>
+  <body class="bg-gray-100">
+    <div id="root"></div>
+
+    <!-- Load config and modules (order matters) -->
+    <script type="text/babel" src="supabase_config.js"></script>
+    <script type="text/babel" src="components.js"></script>
+    <script type="text/babel" src="storage.js"></script>
+    <script type="text/babel" src="auth.js"></script>
+    <script type="text/babel" src="app.jsx"></script>
+
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(
+        <window.Components.ErrorBoundary>
+          <window.App.MortgageCalculator />
+        </window.Components.ErrorBoundary>
+      );
+    </script>
+  </body>
+</html>
