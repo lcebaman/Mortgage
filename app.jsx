@@ -253,7 +253,7 @@ window.App = (() => {
                 {/* Buying & Selling Costs */}
                 <div className="bg-green-50 rounded-lg p-4 border-2 border-green-200">
                   <h2 className="font-semibold text-lg mb-4 flex items-center gap-2">
-                    <Icons.Trend size={20} className="text-green-600" /> Buying &amp; Selling Costs (Auto LBTT)
+                    <Icons.Trend size={20} className="text-green-600" /> Buying &amp; Selling Costs
                   </h2>
                   <div className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -275,7 +275,7 @@ window.App = (() => {
 
                     <div>
                       <label className="block text-sm font-medium mb-2">
-                        Agency Fee (total) — includes Solicitor, Estate Agency, Legal, Buyer Agency, Surveyor, EPC/Other (Selling)
+                        Agency Fee (total) — includes Solicitor, Estate Agency, Legal, Buyer Agency, Surveyor, EPC/Other
                       </label>
                       <input type="number" value={agencyFee}
                              onChange={(e)=>setAgencyFee(Number(e.target.value))}
